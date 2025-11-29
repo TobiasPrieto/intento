@@ -30,6 +30,7 @@ El script principal `inference.py` realiza las siguientes tareas:
 
 Navega a la carpeta `docker` en tu terminal y ejecuta el siguiente comando para construir la imagen:
 
+BASH
 ```bash
 cd docker
 docker build -t prediccion-clima .
@@ -43,6 +44,7 @@ Esto creará una imagen llamada `prediccion-clima`.
 
 Para probar que todo funciona correctamente usando el archivo `input.csv` que ya está dentro de la imagen:
 
+POWERSHELL
 ```PowerShell
 docker run --rm -v $(pwd):/app prediccion-clima
 ```
@@ -52,12 +54,14 @@ docker run --rm -v $(pwd):/app prediccion-clima
 
 Si se quiere predecir con datos alternativos a los proporcionados por defecto, se debe sobreescribir el archivo `input.csv` con los datos deseados, respetando las columnas ya existentes y luego ejecutar el siguiente comando:
 
+POWERSHELL
 ```PowerShell
 docker run --rm -v "$(pwd):/app" prediccion-clima
 ```
 
 o 
 
+CMD
 ```cmd
 docker run --rm -v "%cd%:/app" prediccion-clima
 ```
