@@ -43,8 +43,8 @@ Esto creará una imagen llamada `prediccion-clima`.
 
 Para probar que todo funciona correctamente usando el archivo `input.csv` que ya está dentro de la imagen:
 
-```bash
-docker run --rm -v ${PWD}:/app prediccion-clima
+```PowerShell
+docker run --rm -v $(pwd):/app prediccion-clima
 ```
 
 
